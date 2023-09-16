@@ -1,5 +1,5 @@
 # the base image to start from
-FROM: node:18
+FROM node:18
 
 # tells docker where to find source files and where to put them in image
 COPY . /app
@@ -11,4 +11,7 @@ WORKDIR /app
 RUN npm install
 
 # start command - runs after the image is built
-CMD ["npm". "start"]
+CMD [ "npm", "start" ]
+
+# publishes the port to see at local host link
+EXPOSE 3000
